@@ -1,11 +1,10 @@
 # _Numerical Ping Pong_
 
-#### _This web page will take a number from a user and return:_
+#### _March 2016, This web page will take a number from a user and return:_
 * _a number_
 * _"ping"_
 * _"pong"_
 * _"pingpong"_
-_March 2016_
 
 #### By _**Genevieve Latimer**_
 
