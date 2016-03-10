@@ -1,4 +1,4 @@
-var number;
+
 var pingPong = function(number) {
     if ((number % 3 === 0) && (number % 15 !== 0)) {
       return "ping"
@@ -11,6 +11,11 @@ var pingPong = function(number) {
   }
 }
 $(document).ready(function() {
-  
-})
+  $("form").submit(function(event) {
+    var number = ("form#number").val();
+
+
+    event.preventdefault();
+  });
+});
 //User should be able to enter new numbers and get new results every time
