@@ -1,18 +1,17 @@
-var pingPong = function(number) {
+var pingPong = function(integer) {
   var range = [];
-  var individualNumber = range.split("");
-  for (var i = 1; i <= number; i += 1) {
-    range.push(i);
-    if ((individualNumber % 3 === 0) && (individualNumber % 15 !== 0)) {
-      range.push("ping");
-    } else if ((individualNumber % 5 === 0) && (individualNumber % 15 !== 0)) {
-      range.push("pong");
-    } else if (individualNumber % 15 === 0) {
-      range.push("pingpong");
+  for (var i = 1; i <= integer; i += 1) {
+    if ((i % 3 === 0) && (i % 15 !== 0)) {
+      range.splice("ping");
+    } else if ((i % 5 === 0) && (i % 15 !== 0)) {
+      range.splice("pong");
+    } else if (i % 15 === 0) {
+      range.splice("pingpong");
     } else {
-      return individualNumber;
+      range.push(i);
     };
   };
+  return range;
 };
 
 $(document).ready(function() {
