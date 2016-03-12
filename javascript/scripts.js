@@ -1,9 +1,18 @@
 var pingPong = function(number) {
-  var results = [];
+  var range = [];
+  var individualNumber = range.split("");
   for (var i = 1; i <= number; i += 1) {
-    results.push(i);
+    range.push(i);
+    if ((individualNumber % 3 === 0) && (individualNumber % 15 !== 0)) {
+      range.push("ping");
+    } else if ((individualNumber % 5 === 0) && (individualNumber % 15 !== 0)) {
+      range.push("pong");
+    } else if (individualNumber % 15 === 0) {
+      range.push("pingpong");
+    } else {
+      return individualNumber;
+    };
   };
-  return results;
 };
 
 $(document).ready(function() {
