@@ -8,14 +8,25 @@
     <title>Numerical Ping Pong</title>
   </head>
   <body>
-    <h1>Numerical Ping Pong</h1>
-    <h3>Directions go here</h3>
-    <form>
-      <label for="number">Type any number: </label>
-      <input type="text" id="number" value="">
-      <button type="submit" id="submit" class="btn btn-warning">Submit</button>
-    </form>
-    <div id="result"></div>
+    <div class="col-md-4">
+    <h3>Directions:</h3>
+      <p>This web application is designed to return a range of numbers based on the number your enter -- with a few exceptions:
+        <ul>
+          <li>Numbers divisible by 3 are replaced with "ping"</li>
+          <li>Numbers divisible by 5 are replaced with "pong"</li>
+          <li>Numbers divisible by 15 are replaced with "pingpong"</li>
+        </ul>
+      </p>
+    </div>
+    <div class="col-md-8">
+      <h1>Numerical Ping Pong</h1>
+      <form>
+        <label for="number">Type any number: </label>
+        <input type="text" id="number" value="">
+        <button type="submit" id="submit" class="btn btn-warning">Submit</button>
+      </form>
+      <div id="result"></div>
+      </div>
 
   </body>
 </html>

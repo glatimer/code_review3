@@ -11,15 +11,16 @@ var pingPong = function(number) {
       range.push(i);
     };
   };
-  var string = range.toString();
-  return string;
+  return range;
 };
 $(document).ready(function() {
   $("form").submit(function(event) {
-    var number = parseInt($("input#number").val());
-
-  $("#result").text(pingPong);
-  event.preventDefault();
+    $("li#result").addClass(function(result) {
+      return "item-" + result;
+      var number = parseInt($("input#number").val());
+      var result = pingPong(number);
+    event.preventDefault();
+    });
   });
 });
 //User should be able to enter new numbers and get new results every time
