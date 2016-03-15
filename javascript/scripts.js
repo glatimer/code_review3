@@ -15,12 +15,11 @@ var pingPong = function(number) {
 };
 $(document).ready(function() {
   $("form").submit(function(event) {
-    $("li#result").addClass(function(result) {
-      return "item-" + result;
-      var number = parseInt($("input#number").val());
-      var result = pingPong(number);
-    event.preventDefault();
-    });
+    var number = parseInt($("input#number").val());
+    var result = pingPong(number);
+
+    $("#result").text(result);
+  event.preventDefault();
   });
 });
 //User should be able to enter new numbers and get new results every time
