@@ -18,7 +18,7 @@ $(document).ready(function() {
     var number = parseInt($("input#number").val());
     var result = pingPong(number);
 
-    $("#result").text(result);
+    $("#result").append("<li>" + result + "</li>");
   event.preventDefault();
   });
 });
