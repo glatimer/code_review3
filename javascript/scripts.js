@@ -11,14 +11,14 @@ var pingPong = function(number) {
       range.push(i);
     };
   };
-  var string = range.toString();
-  return string;
+  return range;
 };
 $(document).ready(function() {
   $("form").submit(function(event) {
     var number = parseInt($("input#number").val());
+    var result = pingPong(number);
 
-  $("#result").text(pingPong);
+    $("#result").append("<li>" + result + "</li>");
   event.preventDefault();
   });
 });
